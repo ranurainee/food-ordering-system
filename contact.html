@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+
+    <!-- Google Font & Icon -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        
+.back{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, black, red);
+    color: black;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+.back a{
+    text-decoration: none;
+    color: white;
+}
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(120deg, #ff6a00, #ee0979, #ff6a00);
+            background-size: 300% 300%;
+            animation: bgMove 8s infinite alternate;
+        }
+
+        @keyframes bgMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 34px;
+            color: #fff;
+            margin-bottom: 25px;
+            animation: fadeDown 1s ease;
+        }
+
+        h2::before {
+            content: "\f2b9";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-right: 10px;
+            color: #ffd700;
+        }
+
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        form {
+            background: #ffffff;
+            padding: 35px 30px;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 18px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
+            animation: slideUp 1.2s ease;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 13px 15px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border: 2px solid #eee;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #ee0979;
+            box-shadow: 0 0 10px rgba(238, 9, 121, 0.4);
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
+            transition: 0.4s;
+        }
+
+        button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(238, 9, 121, 0.6);
+        }
+
+        @media (max-width: 480px) {
+            h2 { font-size: 26px; }
+            form { margin: 15px; padding: 25px 20px; }
+        }
+                
+.backs{
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    background: linear-gradient(135deg, black, red);
+    color: black;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backs:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+.backs a{
+    text-decoration: none;
+    color: white;
+}
+    </style>
+</head>
+
+<body>
+
+<h2>Contact Us</h2>
+
+<form action="http://localhost:8080/foodsite/contact.php" method="POST">
+
+    <input type="text" name="full_name" placeholder="Your Full Name" required>
+
+    <input type="email" name="email" placeholder="Your Email Address" required>
+
+    <input type="text" name="contact_number" placeholder="Your Contact Number" required>
+
+    <textarea name="message" placeholder="Type your message here..." required></textarea>
+<a href="index.html">
+    <button type="submit">Send Message</button></a>
+</form><!-- More Button Container -->
+<div class="more-container">
+    <button class="more-btn" onclick="toggleMenu()">≡</button>
+    
+    <div class="more-dropdown" id="moreDropdown">
+        <a href="index.html"> 🡠 Home</a>
+        <a href="menu.html"> 😋🍽️Menu</a>
+    </div>
+</div>
+
+<style>
+.more-container {
+    position: fixed;   /* screen ke right me fix karega */
+    top: 20px;         /* top se distance */
+    right: 20px;       /* right side me lane ke liye */
+    z-index: 1000;
+}
+
+.more-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.more-btn:hover {
+    transform: scale(1.1);
+}
+
+.more-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;   /* dropdown bhi right side open hoga */
+    background: white;
+    min-width: 150px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.more-dropdown a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.more-dropdown a:hover {
+    background: #ff6b6b;
+    color: white;
+}
+</style>
+
+<script>
+function toggleMenu() {
+    let menu = document.getElementById("moreDropdown");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+</script>
+
+<script>
+function toggleMenu() {
+    let menu = document.getElementById("moreDropdown");
+    
+    if(menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+</script>
+
+
+
+
+</body>
+</html>

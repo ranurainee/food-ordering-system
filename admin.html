@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #2c2c3e);
+            color: white;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background: #ff4d4d;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 900px;
+            margin: 30px auto;
+            background: #2f2f44;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            background: #444;
+            color: white;
+        }
+
+        input::placeholder {
+            color: #bbb;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #e60000;
+            transform: scale(1.02);
+        }
+
+        h2 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        #list {
+            margin-top: 10px;
+        }
+
+        .food-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #3b3b55;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .food-item:hover {
+            background: #4a4a6a;
+        }
+
+        .food-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .food-left img {
+            width: 65px;
+            height: 65px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .food-left b {
+            font-size: 16px;
+        }
+
+        .price {
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        .delete-btn {
+            background: #111;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .delete-btn:hover {
+            background: black;
+        }
+
+        @media (max-width: 600px) {
+            .food-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .delete-btn {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Admin Panel</h1>
+
+<div class="container">
+
+    <input type="text" id="name" placeholder="Food Name">
+    <input type="number" id="price" placeholder="Price">
+    <input type="text" id="image" placeholder="Image URL">
+
+    <button onclick="addFood()">Add Food</button>
+
+    <h2>Food List</h2>
+    <div id="list"></div>
+
+</div>
+
+<script>
+
+let foods = JSON.parse(localStorage.getItem("foods")) || [];
+
+function saveData() {
+    localStorage.setItem("foods", JSON.stringify(foods));
+}
+
+function addFood() {
+    const name = document.getElementById("name").value;
+    const price = document.getElementById("price").value;
+    const image = document.getElementById("image").value;
+
+    if (!name || !price || !image) {
+        alert("Fill all fields");
+        return;
+    }
+
+    foods.push({ name, price, image });
+    saveData();
+    showFoods();
+
+    document.getElementById("name").value = "";
+    document.getElementById("price").value = "";
+    document.getElementById("image").value = "";
+}
+
+function deleteFood(index) {
+    foods.splice(index, 1);
+    saveData();
+    showFoods();
+}
+
+function showFoods() {
+    const list = document.getElementById("list");
+    list.innerHTML = "";
+
+    foods.forEach((item, index) => {
+        list.innerHTML += `
+            <div class="food-item">
+                <div class="food-left">
+                    <img src="${item.image}">
+                    <div>
+                        <b>${item.name}</b><br>
+                        <span class="price">₹${item.price}</span>
+                    </div>
+                </div>
+                <button class="delete-btn" onclick="deleteFood(${index})">Delete</button>
+            </div>
+        `;
+    });
+}
+
+showFoods();
+
+</script>
+
+</body>
+</html>
