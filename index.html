@@ -327,6 +327,11 @@ function updateCartCount() {
     const el = document.getElementById("cart-count");
     if (el) el.textContent = count > 0 ? count : '';
 }
+    const user = JSON.parse(localStorage.getItem("user"));
+
+if (!user) {
+    window.location.href = "login.html";
+}
     // 🔐 LOGIN CHECK
 const user = JSON.parse(localStorage.getItem("user"));
 
