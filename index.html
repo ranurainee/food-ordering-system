@@ -327,6 +327,13 @@ function updateCartCount() {
     const el = document.getElementById("cart-count");
     if (el) el.textContent = count > 0 ? count : '';
 }
+    // 🔐 LOGIN CHECK
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (!user) {
+    alert("Please login first!");
+    window.location.href = "login.html";
+}
 
 function attachAddToCart(button) {
     button.addEventListener("click", () => {
@@ -607,7 +614,17 @@ document.addEventListener("DOMContentLoaded", loadFoods);
 
 
 
+// 👤 USER NAME SHOW
+if (user) {
+    document.getElementById("user-name").innerText = user.name;
+}
 
+// 🚪 LOGOUT
+document.getElementById("logout-btn").addEventListener("click", () => {
+    localStorage.removeItem("user");
+    alert("Logged out!");
+    window.location.href = "login.html";
+});
 </script>
 
 
