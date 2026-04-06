@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<link rel="icon" type="image/png" href="favicon_64x64.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Royal Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="beuty.css">
+
+ <link rel="icon" type="image/png" href="rm.png">
+</head>
+
+
+<body>
+    <!-- YOUR EXACT CODE ADDED BELOW -->
+     
+    <div class="top-search-bar">
+        <div class="search-container">
+            <div class="non"><a href="non.html">NONVEG</a></div>
+
+            <form class="search-box" action="#" method="get" id="search-form">
+                <input type="text" placeholder="Search for food, dishes, or restaurants..." name="search" id="search-input" />
+                <button type="submit">Search</button>
+            </form>
+
+            <div class="icon-area">
+                <div class="para">RESTAURANT</div>
+                <a href="cart.html" class="cart-link">
+                    <img src="cart.png" alt="Cart" class="cart-icon" />
+                    <span id="cart-count"></span>
+                </a>
+            </div>
+
+            <div class="theme-toggle-container">
+                <span id="theme-text">Day Mode</span>
+                <button id="theme-toggle" class="theme-toggle-button">Toggle Theme</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <img src="rm.png" alt="Foody Logo" class="logo-img" />
+        <div class="container">
+            <h1>ROYAL RESTAURANT</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="login.html">login👤</a></li>
+                    <li><a href="contact.html">Contact📞</a></li>
+                    <li><a href="about.html">About📜</a></li>
+                    <li><a href="Find.html">Find🔎</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Delicious Food Delivered To You</h2>
+            <p>Experience the best dishes from local chefs and restaurants.</p>
+            
+            <a href="#" class="btn-primary">Order Now</a>
+        </div>
+    </section>
+
+    <section class="menu container">
+        <h2>Our Menu</h2>
+        <div class="menu-items" id="menu-list">
+            <div class="menu-item" data-item="Classic Pizza" data-price="100">
+                <img src="classic.jpg" alt="Pizza" />
+                <h3>Classic Pizza</h3>
+                <p>Cheesy, saucy, and topped with fresh ingredients.</p>
+                <span class="price">INR 100/-</span>
+       <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Juicy Burger" data-price="150">
+                <img src="jsbr.jpg" alt="Burger" />
+                <h3>Juicy Burger</h3>
+                <p>Grilled to perfection with fresh veggies and sauce.</p>
+                <span class="price">INR 150/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+         
+            </div>
+            <div class="menu-item" data-item="Italian Pasta" data-price="100">
+                <img src="it.jpg" alt="Pasta" />
+                <h3>Italian Noodles</h3>
+                <p>Rich tomato sauce with basil and parmesan cheese.</p>
+                <span class="price">INR 100/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+         
+            </div>
+            <div class="menu-item" data-item="Paneer Tikka" data-price="220">
+                <img src="paneer.jpg" alt="Paneer Tikka" />
+                <h3>Paneer Tikka</h3>
+                <p>Spicy grilled paneer with bell peppers and onions.</p>
+                <span class="price">INR 220/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+
+            </div>
+            <div class="menu-item" data-item="Veg Biryani" data-price="180">
+                <img src="veg.jpg" alt="Veg Biryani" />
+                <h3>Vegetable Biryani</h3>
+                <p>Aromatic rice with fresh vegetables and spices.</p>
+                <span class="price">INR 180/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Chocolate Lava Cake" data-price="120">
+                <img src="choco.jpg" alt="Chocolate Lava Cake" />
+                <h3>Choco Lava Cake</h3>
+                <p>Warm cake with a molten chocolate center.</p>
+                <span class="price">INR 120/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Masala Dosa" data-price="90">
+                <img src="masa.webp" alt="Masala Dosa" />
+                <h3>Masala Dosa</h3>
+                <p>Crispy crepe filled with spiced potato mash.</p>
+                <span class="price">INR 90/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="French Fries" data-price="70">
+                <img src="cr.webp" alt="French Fries" />
+                <h3>Crispy French Fries</h3>
+                <p>Golden, crispy fries served with a ketchup dip.</p>
+                <span class="price">INR 70/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Gulab Jamun" data-price="80">
+                <img src="jamun.jpg" alt="Gulab Jamun" />
+                <h3>Gulab Jamun (2 Pcs)</h3>
+                <p>Milk solids dumplings fried and soaked in rose-flavored sugar syrup.</p>
+                <span class="price">INR 80/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Sweet Lassi" data-price="95">
+                <img src="lassi.webp" alt="Sweet Lassi" />
+                <h3>Sweet Lassi</h3>
+                <p>Cool, refreshing yogurt drink, blended with sugar and cardamom.</p>
+                <span class="price">INR 95/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Veg Manchurian" data-price="210">
+                <img src="munchurian.jpg" alt="Veg Manchurian" />
+                <h3>Veg Manchurian (Dry)</h3>
+                <p>Fried vegetable balls tossed in a spicy and tangy Manchurian sauce.</p>
+                <span class="price">INR 210/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Poha" data-price="70">
+                <img src="poha.jpg" alt="Poha" />
+                <h3>Aloo Poha</h3>
+                <p>Light and healthy flattened rice, cooked with potatoes and spices.</p>
+                <span class="price">INR 70/-</span>
+            </div>
+            <div class="menu-item" data-item="Chicken Seekh Kebab" data-price="280">
+                <img src="seek.jpg" alt="Seekh Kebab" />
+                <h3>Chicken Seekh Kebab</h3>
+                <p>Minced chicken, spiced and grilled on skewers.</p>
+                <span class="price">INR 280/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Pani Puri" data-price="60">
+                <img src="panipuri.webp" alt="Pani Puri" />
+                <h3>Pani Puri (6 Pcs)</h3>
+                <p>Hollow crispy balls served with spiced potato, chickpeas, and flavored water.</p>
+                <span class="price">INR 60/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+                
+            </div>
+            <div class="menu-item" data-item="Jalebi" data-price="75">
+                <img src="jalebi.webp" alt="Jalebi" />
+                <h3>Jalebi</h3>
+                <p>Warm, crispy, and juicy sweet pretzel, perfect with rabri (optional).</p>
+                <span class="price">INR 75/-</span>
+            </div>
+            <div class="menu-item" data-item="Tofu Curry" data-price="230">
+                <img src="tofucurry.webp" alt="Tofu Curry" />
+                <h3>Spicy Tofu Masala</h3>
+                <p>Tofu cubes cooked in a thick, spicy, and aromatic onion-tomato gravy.</p>
+                <span class="price">INR 230/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+ <div class="menu-item" data-item="Classic Pizza" data-price="100">
+                <img src="classic.jpg" alt="Pizza" />
+                <h3>Classic Pizza</h3>
+                <p>Cheesy, saucy, and topped with fresh ingredients.</p>
+                <span class="price">INR 100/-</span>
+            </div>
+            <div class="menu-item" data-item="Juicy Burger" data-price="150">
+                <img src="jsbr.jpg" alt="Burger" />
+                <h3>Juicy Burger</h3>
+                <p>Grilled to perfection with fresh veggies and sauce.</p>
+                <span class="price">INR 150/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Italian Pasta" data-price="100">
+                <img src="it.jpg" alt="Pasta" />
+                <h3>Italian Noodles</h3>
+                <p>Rich tomato sauce with basil and parmesan cheese.</p>
+                <span class="price">INR 100/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Paneer Tikka" data-price="220">
+                <img src="paneer.jpg" alt="Paneer Tikka" />
+                <h3>Paneer Tikka</h3>
+                <p>Spicy grilled paneer with bell peppers and onions.</p>
+                <span class="price">INR 220/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Veg Biryani" data-price="180">
+                <img src="veg.jpg" alt="Veg Biryani" />
+                <h3>Vegetable Biryani</h3>
+                <p>Aromatic rice with fresh vegetables and spices.</p>
+                <span class="price">INR 180/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+           
+            <div class="menu-item" data-item="Masala Dosa" data-price="90">
+                <img src="masa.webp" alt="Masala Dosa" />
+                <h3>Masala Dosa</h3>
+                <p>Crispy crepe filled with spiced potato mash.</p>
+                <span class="price">INR 90/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="French Fries" data-price="70">
+                <img src="cr.webp" alt="French Fries" />
+                <h3>Crispy French Fries</h3>
+                <p>Golden, crispy fries served with a ketchup dip.</p>
+                <span class="price">INR 70/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Gulab Jamun" data-price="80">
+                <img src="jamun.jpg" alt="Gulab Jamun" />
+                <h3>Gulab Jamun (2 Pcs)</h3>
+                <p>Milk solids dumplings fried and soaked in rose-flavored sugar syrup.</p>
+                <span class="price">INR 80/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Sweet Lassi" data-price="95">
+                <img src="lassi.webp" alt="Sweet Lassi" />
+                <h3>Sweet Lassi</h3>
+                <p>Cool, refreshing yogurt drink, blended with sugar and cardamom.</p>
+                <span class="price">INR 95/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Veg Manchurian" data-price="210">
+                <img src="munchurian.jpg" alt="Veg Manchurian" />
+                <h3>Veg Manchurian (Dry)</h3>
+                <p>Fried vegetable balls tossed in a spicy and tangy Manchurian sauce.</p>
+                <span class="price">INR 210/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Poha" data-price="70">
+                <img src="poha.jpg" alt="Poha" />
+                <h3>Aloo Poha</h3>
+                <p>Light and healthy flattened rice, cooked with potatoes and spices.</p>
+                <span class="price">INR 70/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Chicken Seekh Kebab" data-price="280">
+                <img src="seek.jpg" alt="Seekh Kebab" />
+                <h3>Chicken Seekh Kebab</h3>
+                <p>Minced chicken, spiced and grilled on skewers.</p>
+                <span class="price">INR 280/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Pani Puri" data-price="60">
+                <img src="panipuri.webp" alt="Pani Puri" />
+                <h3>Pani Puri (6 Pcs)</h3>
+                <p>Hollow crispy balls served with spiced potato, chickpeas, and flavored water.</p>
+                <span class="price">INR 60/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Jalebi" data-price="75">
+                <img src="jalebi.webp" alt="Jalebi" />
+                <h3>Jalebi</h3>
+                <p>Warm, crispy, and juicy sweet pretzel, perfect with rabri (optional).</p>
+                <span class="price">INR 75/-</span>
+                <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+            <div class="menu-item" data-item="Tofu Curry" data-price="230">
+                <img src="tofucurry.webp" alt="Tofu Curry" />
+                <h3>Spicy Tofu Masala</h3>
+                <p>Tofu cubes cooked in a thick, spicy, and aromatic onion-tomato gravy.</p>
+                <span class="price">INR 230/-</span>
+                    <button class="add-to-cart">Add to Cart</button>
+
+            </div>
+
+            <div id="no-results-message">
+                <p>No items match your search.</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+        </div>
+        <center>
+        <button id="add-food-btn">Thanks for visit</button></center>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 Foody Delight. All rights reserved.</p>
+        </div>
+    </footer>
+
+<script>
+
+
+
+
+
+/* ================= CART ================= */
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function updateCartCount() {
+    const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const el = document.getElementById("cart-count");
+    if (el) el.textContent = count > 0 ? count : '';
+}
+
+function attachAddToCart(button) {
+    button.addEventListener("click", () => {
+
+        const item = button.closest(".menu-item");
+        const name = item.dataset.item;
+        const price = parseInt(item.dataset.price);
+        const image = item.querySelector("img").src;
+
+        const existing = cart.find(i => i.name === name);
+
+        if (existing) {
+            existing.quantity++;
+        } else {
+            cart.push({ name, price, image, quantity: 1 });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+
+        alert(name + " added to cart!");
+    });
+}
+
+
+/* ================= ADD FOOD WITH VALIDATION ================= */
+
+
+document.getElementById("add-food-btn").addEventListener("click", function () {
+
+    const name = document.getElementById("food-name").value.trim();
+    const price = document.getElementById("food-price").value.trim();
+    const image = document.getElementById("food-image").value.trim();
+
+    // 1. Empty check
+    if (name === "" || price === "" || image === "") {
+        alert("Fill all fields!");
+        return;
+    }
+
+    // 2. Name validation
+    const namePattern = /^[A-Za-z\s]{3,}$/;
+    if (!namePattern.test(name)) {
+        alert("Enter valid food name!");
+        return;
+    }
+
+    // 3. Fake words block
+    const invalidWords = ["test", "abc", "xyz", "item", "food"];
+    let isFake = false;
+
+    for (let word of invalidWords) {
+        if (name.toLowerCase().includes(word)) {
+            isFake = true;
+            break;
+        }
+    }
+
+    if (isFake) {
+        alert("Invalid food name!");
+        return;
+    }
+
+    // 4. Price validation
+    if (isNaN(price) || Number(price) <= 0) {
+        alert("Enter valid price!");
+        return;
+    }
+
+    // 5. Image validation
+    if (!image.startsWith("http")) {
+        alert("Enter valid image URL!");
+        return;
+    }
+
+    // 6. Duplicate check
+    const items = document.querySelectorAll(".menu-item");
+    for (let item of items) {
+        if (item.dataset.item.toLowerCase() === name.toLowerCase()) {
+            alert("Item already exists!");
+            return;
+        }
+    }
+
+    // 7. Add item
+    const menuList = document.getElementById("menu-list");
+    const noResults = document.getElementById("no-results-message");
+
+    const div = document.createElement("div");
+    div.className = "menu-item";
+    div.setAttribute("data-item", name);
+    div.setAttribute("data-price", price);
+
+    div.innerHTML = `
+        <img src="${image}" alt="${name}">
+        <h3>${name}</h3>
+        <p>Freshly made delicious ${name}.</p>
+        <span class="price">INR ${price}/-</span>
+        <button class="add-to-cart">Add to Cart</button>
+    `;
+
+    menuList.insertBefore(div, noResults);
+
+    // Attach cart
+    const btn = div.querySelector(".add-to-cart");
+    attachAddToCart(btn);
+
+    // Clear inputs
+    document.getElementById("food-name").value = "";
+    document.getElementById("food-price").value = "";
+    document.getElementById("food-image").value = "";
+
+    alert(name + " added successfully!");
+});
+
+/* ================= SEARCH ================= */
+
+document.getElementById("search-form").addEventListener("submit", e => {
+    e.preventDefault();
+
+    const term = document.getElementById("search-input").value.toLowerCase();
+    const items = document.querySelectorAll(".menu-item");
+    const noMsg = document.getElementById("no-results-message");
+
+    let found = false;
+
+    items.forEach(item => {
+        const name = item.dataset.item.toLowerCase();
+
+        if (name.includes(term) || term === "") {
+            item.style.display = "block";
+            if (term !== "") found = true;
+        } else {
+            item.style.display = "none";
+        }
+    });
+
+    noMsg.style.display = (!found && term !== "") ? "block" : "none";
+});
+
+/* ================= THEME ================= */
+
+const themeToggle = document.getElementById("theme-toggle");
+const themeText = document.getElementById("theme-text");
+
+function applyTheme(dark) {
+    if (dark) {
+        document.body.classList.add("dark-mode");
+        themeText.innerText = "Night Mode";
+    } else {
+        document.body.classList.remove("dark-mode");
+        themeText.innerText = "Day Mode";
+    }
+}
+
+themeToggle.addEventListener("click", () => {
+    const isDark = document.body.classList.contains("dark-mode");
+    applyTheme(!isDark);
+    localStorage.setItem("theme", !isDark ? "dark" : "light");
+});
+
+/* ================= LOAD ================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const savedTheme = localStorage.getItem("theme");
+    applyTheme(savedTheme === "dark");
+
+    document.querySelectorAll(".add-to-cart").forEach(attachAddToCart);
+
+    updateCartCount();
+});
+
+
+/* ================= ADD FOOD WITH VALIDATION ================= */
+
+document.getElementById("add-food-btn").addEventListener("click", function () {
+
+    const name = document.getElementById("food-name").value.trim();
+    const price = document.getElementById("food-price").value.trim();
+    const image = document.getElementById("food-image").value.trim();
+
+    if (name === "" || price === "" || image === "") {
+        alert("Fill all fields!");
+        return;
+    }
+
+    // ✅ STRONG NAME VALIDATION
+    const namePattern = /^[A-Za-z]+(?:\s[A-Za-z]+)*$/;
+    if (!namePattern.test(name) || name.length < 3) {
+        alert("Enter valid food name!");
+        return;
+    }
+
+    // ✅ FAKE WORD BLOCK
+    const invalidWords = ["test", "abc", "xyz", "item", "food"];
+    for (let word of invalidWords) {
+        if (name.toLowerCase().includes(word)) {
+            alert("Invalid food name!");
+            return;
+        }
+    }
+
+    // ✅ PRICE CHECK
+    if (isNaN(price) || Number(price) <= 0) {
+        alert("Enter valid price!");
+        return;
+    }
+
+    // ✅ STRONG IMAGE CHECK
+    if (!image.match(/^https?:\/\/.*\.(jpg|jpeg|png|webp)$/)) {
+        alert("Enter valid image URL!");
+        return;
+    }
+
+    // ✅ DUPLICATE CHECK
+    const items = document.querySelectorAll(".menu-item");
+    for (let item of items) {
+        if (item.dataset.item.toLowerCase() === name.toLowerCase()) {
+            alert("Item already exists!");
+            return;
+        }
+    }
+
+    // ✅ ADD ITEM
+    const menuList = document.getElementById("menu-list");
+    const noResults = document.getElementById("no-results-message");
+
+    const div = document.createElement("div");
+    div.className = "menu-item";
+    div.setAttribute("data-item", name);
+    div.setAttribute("data-price", price);
+
+    div.innerHTML = `
+        <img src="${image}" alt="${name}">
+        <h3>${name}</h3>
+        <p>Freshly made delicious ${name}.</p>
+        <span class="price">INR ${price}/-</span>
+        <button class="add-to-cart">Add to Cart</button>
+    `;
+
+    menuList.insertBefore(div, noResults);
+
+    attachAddToCart(div.querySelector(".add-to-cart"));
+
+    document.getElementById("food-name").value = "";
+    document.getElementById("food-price").value = "";
+    document.getElementById("food-image").value = "";
+
+    alert(name + " added successfully!");
+});
+
+let foods = JSON.parse(localStorage.getItem("foods")) || [];
+
+function loadFoods() {
+    const menuList = document.getElementById("menu-list");
+
+    foods.forEach(food => {
+        const div = document.createElement("div");
+        div.className = "menu-item";
+        div.setAttribute("data-item", food.name);
+        div.setAttribute("data-price", food.price);
+
+        div.innerHTML = `
+            <img src="${food.image}">
+            <h3>${food.name}</h3>
+            <span class="price">INR ${food.price}/-</span>
+            <button class="add-to-cart">Add to Cart</button>
+        `;
+
+        menuList.appendChild(div);
+        attachAddToCart(div.querySelector(".add-to-cart"));
+    });
+}
+
+document.addEventListener("DOMContentLoaded", loadFoods);
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
