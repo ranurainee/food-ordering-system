@@ -238,6 +238,12 @@ Log in or sign up to order your favorite dishes. 🍔🚀</p>
     if (result.message === "Signup successful") {
     localStorage.setItem("user", JSON.stringify(data));
     window.location.href = "index.html";
+}if (result.message === "Login success") {
+    localStorage.setItem("user", JSON.stringify(result.user));
+
+    alert("Welcome " + result.user.name);
+
+    window.location.href = "index.html";
 }
   </script>
 </body>
