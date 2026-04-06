@@ -287,6 +287,32 @@
     position: relative;
     z-index: 10;
 }
+/* Add to Cart Button Styling */
+.add-to-cart {
+    background-color: #e60023; /* red color */
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px; /* smooth rounded */
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.add-to-cart:hover {
+    background-color: #cc001f; /* darker red */
+    transform: scale(1.05);
+}
+
+/* Click Effect */
+.add-to-cart:active {
+    transform: scale(0.95);
+}
+.add-to-cart {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
 
 
    
